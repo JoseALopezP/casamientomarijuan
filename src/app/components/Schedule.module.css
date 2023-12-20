@@ -1,0 +1,25 @@
+.scheduleBlock{
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
+.scheduleBlock, .infoScheduleBlock, .divisonScheduleBlock{
+    display: flex;
+    width: 200px;
+}
+.scheduleBlock svg{
+    display: flex;
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+.divisonScheduleBlock{
+}
+.divisonScheduleBlock img{
+    width: 200px;
+}
+
+.infoScheduleBlock{
+    display: inline-flex;
+    flex-direction: column;
+}
