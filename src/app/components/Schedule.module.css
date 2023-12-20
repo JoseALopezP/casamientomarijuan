@@ -1,6 +1,8 @@
 .scheduleBlock{
     display: inline-flex;
     flex-flow: row nowrap;
+    background-image: url(../../../public/images/marble.png);
+    background-size: cover;
 }
 
 .scheduleBlock, .infoScheduleBlock, .divisonScheduleBlock{
