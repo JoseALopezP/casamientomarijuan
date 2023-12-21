@@ -1,0 +1,26 @@
+.giftBlock{
+    position: relative;
+    top: -250px;
+    width: 100%;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+}
+.giftButton{
+    align-self: center;
+    width: 40%;
+    height: 80px;
+    border-radius: 8px;
+    border: solid #EFEBEA;
+    color: #EFEBEA;
+    text-decoration: none;
+    transform: scale(1, .9);
+    letter-spacing: 1px;
+    background-color: #991D31;
+    padding: 6px 30px 6px 30px;
+}
+
+.giftText{
+    text-align: center;
+}
