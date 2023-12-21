@@ -1,7 +1,7 @@
 .photoBlock{
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
 }
 .photoBlock img{
-    width: 100vw;
+    width: 100%;
     height: auto;
 }

@@ -3,18 +3,27 @@
     background-size: cover;
 }
 .scheduleBlock{
-    margin: 80px;
-    width: 100vw;
+    margin: 0;
+    width: calc(100vw - (100vw - 100%));
+    min-height: 600px;
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: center;
+    margin-top: 50px;
 }
 
-.infoScheduleBlock, .divisonScheduleBlock{
+.divisonScheduleBlock{
     display: flex;
     width: 200px;
 }
-.scheduleBlock svg{
+.infoScheduleBlock, .iconsInfoBlock{
+    display: flex;
+    width: 80px;
+}
+.iconsInfoBlock{
+    flex-flow: column nowrap;
+}
+.iconsInfoBlock svg{
     display: flex;
     margin-bottom: 30px;
     width: 80px;

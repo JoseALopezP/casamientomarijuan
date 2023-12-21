@@ -3,7 +3,8 @@ import Link from 'next/link'
 
 export function Information () {
     return (
-        <section className={`${styles.informationBlock}`}>
+        <section className={`${styles.informationSection}`}>
+            <div className={`${styles.informationBlock}`}>
             <span>Mariana</span>
             <span>&</span>
             <span>Juan</span>
@@ -17,6 +18,7 @@ export function Information () {
             <p>SALÓND DE EVENTOS ...</p>
             <p>Av. Roca y Coronado</p>
             <Link href="https://en.wikipedia.org/wiki/Next.js">VER UBICACION</Link>
+            </div>
         </section>
     )
 }

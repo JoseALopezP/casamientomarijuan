@@ -1,0 +1,11 @@
+.informationSection{
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - (100vw - 100%));
+}
+.informationBlock{
+    display: inline-flex;
+    flex-flow: column nowrap;
+    width: 50vw;
+    text-align: center;
+}

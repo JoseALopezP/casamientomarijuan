@@ -1,0 +1,15 @@
+.presentationSection{
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - (100vw - 100%));
+}
+.presentationBlock{
+    display: inline-flex;
+    flex-flow: column nowrap;
+    width: 50vw;
+    text-align: center;
+}
+
+.presentationBlock span{
+    text-align: end;
+}
