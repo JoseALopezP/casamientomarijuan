@@ -1,7 +1,11 @@
 .photoBlock{
-    width: calc(100vw - (100vw - 100%));
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 .photoBlock img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 75vh;
+    position: relative;
+    left: -440px;
 }

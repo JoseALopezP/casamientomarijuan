@@ -1,11 +1,68 @@
 .invitationSection{
     display: flex;
     justify-content: center;
-    width: calc(100vw - (100vw - 100%));
+    width: 100%;
 }
 .invitationBlock{
     display: inline-flex;
     flex-flow: column nowrap;
-    width: 50vw;
+    width: 80vw;
     text-align: center;
+    margin-top: 120px;
+}
+
+.girlfriendN, .ampersandN, .boyfriendN{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.girlfriendN{
+    text-align: start;
+    position: relative;
+    top: -50px;
+}
+
+.boyfriendN{
+    text-align: end;
+    line-height: 80px;
+    position: relative;
+    right: 40px;
+    top: -40px;
+}
+
+.ampersandN{
+    font-weight: 100;
+    position: relative;
+    top: -50px;
+    font-size: 32px;
+    line-height: 60px;
+}
+
+.girlfriendN b, .boyfriendN b{
+    font-weight: 200;
+    font-size: 72px;
+}
+
+.sideBouqet1{
+    position: relative;
+    top: 120px;
+    width: 30%;
+    height: 30%;
+    left: 80px;
+}
+
+.sideBouqet2{
+    position: relative;
+    right: 86px;
+    top: 0;
+    width: 30%;
+    height: 30%;
+}
+
+.invitationText{
+    line-height: 14px;
+    margin-top: 45px;
+    width: 80vw;
+    word-spacing: 1px;
+    font-size: 14px;
 }

@@ -1,11 +1,74 @@
 .informationSection{
     display: flex;
     justify-content: center;
-    width: calc(100vw - (100vw - 100%));
+    width: 100%;
 }
 .informationBlock{
     display: inline-flex;
     flex-flow: column nowrap;
-    width: 50vw;
+    width: 90vw;
     text-align: center;
+}
+
+.dateInformationMonth{
+    margin-left: 50px;
+    text-align: center;
+    transform: rotate(8.5deg);
+    translate: 30px;
+    letter-spacing: 3px;
+}
+
+.dateInformationText{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+.dateTextBox{
+    width: 30%;
+    border: solid;
+    border-width: 1px 0 1px 0;
+    height: 22px;
+    letter-spacing: 4px;
+}
+.dateDayBox{
+    width: 20%;
+    margin: 14px 0 0 0;
+    padding: 0;
+    position: relative;
+    left: 3px;
+    line-height: 24px;
+    font-size: 72px;
+    color: #991D31;
+}
+
+.dateInfoHour, .dateInfoTitle, .dateInfoPlace, .dateInfoUbi{
+    margin: 0px 0 0 0;
+    letter-spacing: 1px;
+    line-height: 16px;
+    font-size: 14px;
+}
+.informationBlock h5{
+    font-weight: 200;
+}
+.dateInfoUbi{
+    font-size: 10px;
+    line-height: 6px;
+    margin-top: 2px;
+}
+.dateInfoHour{
+    margin-top: 20px;
+}
+
+.dateInfoUbiTag{
+    align-self: center;
+    border-radius: 8px;
+    border: solid #EFEBEA;
+    color: #EFEBEA;
+    text-decoration: none;
+    transform: scale(1, .9);
+    letter-spacing: 1px;
+    background-color: #991D31;
+    padding: 6px 30px 6px 30px;
+    width: fit-content;
 }
