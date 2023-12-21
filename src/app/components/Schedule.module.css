@@ -1,21 +1,28 @@
-.scheduleBlock{
-    display: inline-flex;
-    flex-flow: row nowrap;
+.containerSchedule{
     background-image: url(../../../public/images/marble.png);
     background-size: cover;
 }
+.scheduleBlock{
+    margin: 80px;
+    width: 100vw;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
 
-.scheduleBlock, .infoScheduleBlock, .divisonScheduleBlock{
+.infoScheduleBlock, .divisonScheduleBlock{
     display: flex;
     width: 200px;
 }
 .scheduleBlock svg{
     display: flex;
-    margin-top: 20px;
+    margin-bottom: 30px;
     width: 80px;
-    height: 80px;
+    height: 70px;
 }
 .divisonScheduleBlock{
+    color: black;
+    margin-top: 40px;
 }
 .divisonScheduleBlock img{
     width: 200px;
@@ -24,4 +31,15 @@
 .infoScheduleBlock{
     display: inline-flex;
     flex-direction: column;
+    margin-top: 20px;
+}
+.iconsInfoBlock svg{
+    color: black;
+}
+
+.infoScheduleBlock span{
+    font-weight: 800;
+}
+.infoScheduleBlock p{
+    margin-bottom: 42px;
 }
