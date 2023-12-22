@@ -1,0 +1,39 @@
+.bouquet4{
+    position: relative;
+    width: 40%;
+    height: auto;
+    right: -60%;
+    top:-280px;
+}
+.confirmationBlock{
+    width: 100%;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+    top: -380px;
+    margin-bottom: -400px;
+}
+.confirmationText{
+    width: 80%;
+    text-align: center;
+}
+.confirmationButton{
+    align-self: center;
+    margin-bottom: 10px;
+    width: 40%;
+    height: 60px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    border: solid #EFEBEA;
+    color: #EFEBEA;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: #991D31;
+    padding: 6px 0 6px 0;
+}
+
+.confirmationTick{
+    stroke: #991D31;
+}
