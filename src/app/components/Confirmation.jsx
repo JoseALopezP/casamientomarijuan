@@ -1,9 +1,16 @@
+'use client'
+
+import { useState } from 'react'
 import styles from './Confirmation.module.css'
 import Image from 'next/image'
 
 export function Confirmation () {
+    const [confirmationView, setConfirmationView] = useState(false);
     return (
         <>
+        {confirmationView && <div className={`${styles.confirmationViewBlock}`}>
+                <button type="button" className={`${styles.closeConfirmationView}`} onClick={() => setConfirmationView(false)}>X</button>
+        </div>}
         <Image
             className={`${styles.bouquet4}`}
             src="/images/bouquets/side4.png"
@@ -18,7 +25,7 @@ export function Confirmation () {
             </svg>
             <h3 className={`${styles.confirmationTitle}`}>CONFIRMACION</h3>
             <p className={`${styles.confirmationText}`}>POR FAVOR CONFIRMAR TU ASISTENCIA ANTES DEL 20 DE MARZO</p>
-            <button type='button' className={`${styles.confirmationButton}`}>CONFIRMAR ASISTENCIA</button>
+            <button type='button' className={`${styles.confirmationButton}`} onClick={() => setConfirmationView(true)}>CONFIRMAR ASISTENCIA</button>
         </section>
         </>
     )
