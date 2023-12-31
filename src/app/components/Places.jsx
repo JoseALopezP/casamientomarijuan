@@ -1,7 +1,7 @@
 import styles from './Places.module.css'
 import Image from 'next/image'
 
-export function Places () {
+export function Places ({quant}) {
     return (
         <>
         <Image
@@ -19,8 +19,8 @@ export function Places () {
                 <g id="Layer_1"/>
             </svg>
             <p className={`${styles.placesText}`}>HAY</p>
-            <span>2</span>
-            <p className={`${styles.placesText}`}>LUGARES RESERVADOS PARA TI</p>
+            <span>{quant}</span>
+            <p className={`${styles.placesText}`}>{(quant==1)?'LUGAR RESERVADO' : 'LUGARES RESERVADOS'} PARA TI</p>
         </section>
         </>
     )

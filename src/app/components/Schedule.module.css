@@ -3,7 +3,7 @@
     background-size: cover;
     margin-top: 40px;
 }
-.scheduleBlock{
+.scheduleBlockCena, .scheduleBlockDCena{
     margin: 40px 0 0 0;
     width: 100%;
     min-height: 600px;
@@ -60,6 +60,21 @@
 }
 .infoScheduleBlock p{
     margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.scheduleBlockDCena .iconsInfoBlock{
+    margin-top: 40px;
+}
+.scheduleBlockDCena .iconsInfoBlock svg{
+    margin-top: 30px;
+}
+.scheduleBlockDCena .infoScheduleBlock{
+    margin-top: 90px;
+}
+.scheduleBlockDCena .infoScheduleBlock p{
+    margin-bottom: 86px;
     font-size: 20px;
     font-weight: 600;
 }

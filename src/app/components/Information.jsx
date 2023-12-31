@@ -17,14 +17,14 @@ export function Information () {
                 <p className={`${styles.dateTextBox}`}>2024</p>
                 </div>
             </div>
-            <h5 className={`${styles.dateInfoHour}`}>18:00 HS</h5>
+            <h5 className={`${styles.dateInfoHour}`}>19:45 HS</h5>
             <h4 className={`${styles.dateInfoTitle}`}>CEREMONIA</h4>
-            <p className={`${styles.dateInfoPlace}`}>CAPILLA ...</p>
+            <p className={`${styles.dateInfoPlace}`}>PARROQUIA NUESTRA SEÑORA DEL VALLE</p>
             <p className={`${styles.dateInfoUbi}`}><i>Av Roca y Coronado</i></p>
             <Link href="https://en.wikipedia.org/wiki/Next.js" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
-            <h5 className={`${styles.dateInfoHour}`}>19:30 HS</h5>
+            <h5 className={`${styles.dateInfoHour}`}>21:00 HS</h5>
             <h4 className={`${styles.dateInfoTitle}`}>RECEPCION</h4>
-            <p className={`${styles.dateInfoPlace}`}>SALÓN DE EVENTOS ...</p>
+            <p className={`${styles.dateInfoPlace}`}>SALÓN GALANA EVENTOS</p>
             <p className={`${styles.dateInfoUbi}`}><i>Av. Roca y Coronado</i></p>
             <Link href="https://en.wikipedia.org/wiki/Next.js" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
             </div>
