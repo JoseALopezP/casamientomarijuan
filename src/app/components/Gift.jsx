@@ -1,6 +1,7 @@
 'use client'
 import styles from './Gift.module.css'
 import { useState } from 'react'
+import { GiftSelector } from './GiftSelector';
 
 export function Gift () {
     const [giftView, setGiftView] = useState(false);
@@ -10,6 +11,7 @@ export function Gift () {
             {giftView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setGiftView(false)}>X</button>
                 <p>Podés elegir 1 o más regalos y dejarnos una notita (tienen enlaces de ejemplo)</p>
+                <GiftSelector/>
             </div>}
             {transferView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setTransferView(false)}>X</button>
