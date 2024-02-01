@@ -1,6 +1,6 @@
 import styles from './GiftSelector.module.css'
 
-export function Photo () {
+export function GiftSelector () {
     return (
         <section className={`${styles.giftSelectorBlock}`}>
         </section>

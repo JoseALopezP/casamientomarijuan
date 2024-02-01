@@ -9,7 +9,7 @@ export function Confirmation () {
     return (
         <>
         {confirmationView && <div className={`${styles.confirmationViewBlock}`}>
-                <button type="button" className={`${styles.closeConfirmationView}`} onClick={() => setConfirmationView(false)}>X</button>
+            <button type="button" className={`${styles.closeConfirmationView}`} onClick={() => setConfirmationView(false)}>X</button>
         </div>}
         <Image
             className={`${styles.bouquet4}`}
