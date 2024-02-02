@@ -40,7 +40,7 @@
      id="layer1"
      transform="translate(91.810427,-113.77083)">
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.31507"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:3.31507"
        id="path1-0"
        cx="-68.849693"
        cy="116.63214"
@@ -49,20 +49,20 @@
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.31507"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:3.31507"
        id="path1-4-7"
        cx="-68.818474"
        cy="253.72318"
        r="2.8613119" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.03696"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:3.03696"
        id="rect1-1"
        width="1"
        height="135.70395"
        x="-69.35305"
        y="118.71017" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.76817"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:1.76817"
        id="rect1-5-8"
        width="1"
        height="46"
@@ -70,7 +70,7 @@
        y="45.810421"
        transform="rotate(90)" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.76817"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:1.76817"
        id="rect1-5-6-0"
        width="1"
        height="46"
