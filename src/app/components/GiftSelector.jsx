@@ -1,12 +1,14 @@
-'use server'
 import getCollection from '@/firebase/firestore/getCollection'
+import { useEffect } from 'react'
 import styles from './GiftSelector.module.css'
 
-export async function GiftSelector () {
-    const gifts = await getCollection('giftList')
-    await console.log(gifts)
+export default function GiftSelector () {
+    useEffect(() =>{
+        const gifts = getCollection('giftList')
+    }, [])
     return (
         <section className={`${styles.giftSelectorBlock}`}>
+            {gifts}
         </section>
     )
 }
