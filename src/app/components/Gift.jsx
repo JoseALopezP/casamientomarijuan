@@ -1,6 +1,5 @@
 'use client'
 import styles from './Gift.module.css'
-<<<<<<< HEAD
 import { useState, useContext } from 'react'
 import GiftSelector from './GiftSelector';
 import { TransferSelector } from './TransferSelector';
