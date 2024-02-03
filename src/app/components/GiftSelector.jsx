@@ -1,15 +1,19 @@
 import getCollection from '@/firebase/firestore/getCollection'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './GiftSelector.module.css'
-import { doc, getDoc } from "firebase/firestore";
 
 export default function GiftSelector () {
+    const [gifts, setGifts] = useState('')
     useEffect(() =>{
-        const gifts = getCollection('giftList')
+        setGifts(getCollection('giftList'))
     }, [])
     return (
         <section className={`${styles.giftSelectorBlock}`}>
-            {gifts}
+            {gifts.map((itm) => {
+                    return(
+                        <p>{itm}</p>
+                    );
+                })}
         </section>
     )
 }
