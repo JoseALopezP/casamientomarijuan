@@ -3,11 +3,13 @@ import styles from './Gift.module.css'
 import { useState, useContext } from 'react'
 import GiftSelector from './GiftSelector';
 import { TransferSelector } from './TransferSelector';
+import { DataContextProvider } from "@/context/DataContext";
 
 export function Gift () {
     const [giftView, setGiftView] = useState(false);
     const [transferView, setTransferView] = useState(false);
     return (
+        <DataContextProvider>
         <section className={`${styles.giftBlock}`}>
             {giftView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setGiftView(false)}>X</button>
@@ -26,5 +28,6 @@ export function Gift () {
             <button type="button" className={`${styles.giftButton}`} onClick={() => setGiftView(true)}>REGALO</button>
             <button type="button" className={`${styles.giftButton}`} onClick={() => setTransferView(true)}>TRANSFERENCIA</button>
         </section>
+        </DataContextProvider>
     )
 }

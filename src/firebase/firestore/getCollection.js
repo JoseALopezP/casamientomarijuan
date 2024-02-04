@@ -11,5 +11,6 @@ export default async function getCollection(collectionName) {
     } catch (e) {
         console.log(e)
     }
+    console.log(result)
     return result;
 }

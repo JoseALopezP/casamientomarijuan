@@ -1,33 +1,35 @@
 import React, { createContext, useState} from "react";
-import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc} from 'firebase/firestore';
+import {doc, updateDoc, getFirestore} from 'firebase/firestore';
+import firebase_app from "@/firebase/config";
 import getCollection from "@/firebase/firestore/getCollection";
-import db from '../services/firebase';
-export const GListContext = createContext({});
+import addData from "@/firebase/firestore/addData";
+import removeData from "@/firebase/firestore/removeData";
+export const DataContext = createContext({});
 
 const {Provider} = DataContext;
-
-export const DataContext = ({defaultValue = [], children}) => {
+const db = getFirestore(firebase_app)
+export const DataContextProvider = ({defaultValue = [], children}) => {
     const [gifts, setGifts] = useState(defaultValue);
     const [notes, setNotes] = useState(defaultValue);
     const [gifteds, setGifteds] = useState(defaultValue);
     const [transfers, setTransfers] = useState(defaultValue);
     const [confirmeds, setGuests] = useState(defaultValue);
     const [idSelected, setIdSelected] = useState('');
-    const collectionReference = collection(db, "askedGifts");
+    
 
-    const updateGifts = async() => {
+    const updateGifts = () => {
         setGifts(getCollection('giftList'))
     }
-    const updateNotes = async() => {
-        setNotes(getCollection('giftList'))
+    const updateNotes = () => {
+        setNotes(getCollection('notesList'))
     }
-    const updateGifteds = async() => {
+    const updateGifteds = () => {
         setGifteds(getCollection('giftedList'))
     }
-    const updateTransfers = async() => {
-        setTransfers(getCollection('giftList'))
+    const updateTransfers = () => {
+        setTransfers(getCollection('transferedList'))
     }
-    const updateGuests = async() => {
+    const updateGuests = () => {
         setGuests(getCollection('guestList'))
     }
 
@@ -38,38 +40,76 @@ export const DataContext = ({defaultValue = [], children}) => {
             setIdSelected(id);
         }
     }
+    
     const selectGift = async() => {
-        const result = doc(db, "askedGifts", idSelected);
+        const result = doc(db, "giftList", idSelected);
         await updateDoc(result, {
         status: false
         });
+        addGifted(data)
     }
 
-    const addGift = async(data) => {
-        try {
-            await addDoc(collectionReference, data);
-        } catch (error) {
-            console.log(error)
-        }
+    const addGift = (data) => {
+        addData('giftList', data)
+    }
+    const addNote = (data) => {
+        addData('notesList', data)
+    }
+    const addGifted = async(data) => {
+        addData('giftedList', data)
+    }
+    const addTransfered = async(data) => {
+        addData('transferedList', data)
+    }
+    const addGuest = async(data) => {
+        addData('guestList', data)
     }
 
-    const removeGift = async (id) => {
-        try{
-            await deleteDoc(doc(db, 'askedGifts', id))
-            await updateGList();
-        }catch (error){
-            console.log(error)
-        }
+    const removeGift = (id) => {
+        removeData('giftList', id)
     }
+    const removeNote = async (id) => {
+        removeData('notesList', id)
+    }
+    const removeGifted = async (id) => {
+        const result1 = doc(db, "giftedList", id);
+        const result2 = doc(db, "giftList", result1.gid);
+        await updateDoc(result2, {
+        status: true
+        });
+        await removeData('giftedList', id)
+    }
+    const removeTransfered = (id) => {
+        removeData('transferedList', id)
+    }
+    const removeGuest = (id) => {
+        removeData('guestList', id)
+    }
+
     const context = {
-        addGift,
-        updateGList,
+        updateGifts,
+        updateNotes,
+        updateGifteds,
+        updateTransfers,
+        updateGuests,
+        selectId,
         selectGift,
-        gList,
-        idSelected,
-        selectId, 
-        setIdSelected,
-        removeGift
+        addGift,
+        addNote,
+        addGifted,
+        addTransfered,
+        addGuest,
+        removeGift,
+        removeNote,
+        removeGifted,
+        removeTransfered,
+        removeGuest,
+        gifts,
+        notes,
+        gifteds,
+        transfers,
+        confirmeds,
+        idSelected
     }
     return(
         <>

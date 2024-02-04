@@ -7,6 +7,7 @@ import { Places } from "../../components/Places";
 import { Gift } from "../../components/Gift";
 import { Confirmation } from "../../components/Confirmation";
 
+
 export default function Home({params}) {
   return (
     <main>
