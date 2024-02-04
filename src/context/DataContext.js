@@ -17,20 +17,20 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
     const [idSelected, setIdSelected] = useState('');
     
 
-    const updateGifts = () => {
-        setGifts(getCollection('giftList'))
+    const updateGifts = async() => {
+        setGifts(await getCollection('giftList'))
     }
-    const updateNotes = () => {
-        setNotes(getCollection('notesList'))
+    const updateNotes = async() => {
+        setNotes(await getCollection('notesList'))
     }
-    const updateGifteds = () => {
-        setGifteds(getCollection('giftedList'))
+    const updateGifteds = async() => {
+        setGifteds(await getCollection('giftedList'))
     }
-    const updateTransfers = () => {
-        setTransfers(getCollection('transferedList'))
+    const updateTransfers = async() => {
+        setTransfers(await getCollection('transferedList'))
     }
-    const updateGuests = () => {
-        setGuests(getCollection('guestList'))
+    const updateGuests = async() => {
+        setGuests(await getCollection('guestList'))
     }
 
     const selectId = (id) =>{
