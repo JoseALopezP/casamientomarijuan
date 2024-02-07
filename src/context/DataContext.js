@@ -39,6 +39,7 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         }else{
             setIdSelected(id);
         }
+        
     }
     
     const selectGift = async() => {
