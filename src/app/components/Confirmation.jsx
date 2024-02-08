@@ -1,15 +1,19 @@
 'use client'
-
 import { useState } from 'react'
+import ConfirmationSelector from './ConfirmationSelector'
 import styles from './Confirmation.module.css'
 import Image from 'next/image'
+import { DataContextProvider } from "@/context/DataContext";
 
-export function Confirmation () {
+export function Confirmation ({quantity}) {
     const [confirmationView, setConfirmationView] = useState(false);
     return (
         <>
-        {confirmationView && <div className={`${styles.confirmationViewBlock}`}>
+        <DataContextProvider>
+        {confirmationView && 
+        <div className={`${styles.confirmationViewBlock}`}>
             <button type="button" className={`${styles.closeConfirmationView}`} onClick={() => setConfirmationView(false)}>X</button>
+            <ConfirmationSelector quantity={quantity}/>
         </div>}
         <Image
             className={`${styles.bouquet4}`}
@@ -27,6 +31,7 @@ export function Confirmation () {
             <p className={`${styles.confirmationText}`}>POR FAVOR CONFIRMAR TU ASISTENCIA ANTES DEL 20 DE MARZO</p>
             <button type='button' className={`${styles.confirmationButton}`} onClick={() => setConfirmationView(true)}>CONFIRMAR ASISTENCIA</button>
         </section>
+        </DataContextProvider>
         </>
     )
 }

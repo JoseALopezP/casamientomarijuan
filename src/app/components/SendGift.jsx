@@ -8,13 +8,7 @@ const SendGift = ({type}) => {
     const [isOk, setIsOk] = useState('');
     const [msg, setMsg] = useState('');
     const [sentStatus, setSentStatus] = useState(true);
-    const {idSelected, selectGift, addGifted, gift} = useContext(DataContext);
-
-    const idToType = () =>{
-        if(idSelected !== ''){
-            setGift()
-        }
-    }
+    const {idSelected, updateGifts, selectId, selectGift, gift} = useContext(DataContext);
 
     const handleSubmit = async(event) => {
         event.preventDefault();
@@ -33,10 +27,10 @@ const SendGift = ({type}) => {
                 "gid": gift.id,
                 "gift": gift.gName
             }
-            await addGifted(data);
-            ((transferNum !== '') ? idToType() : await selectGift());
+            await selectGift(data);
+            await updateGifts();
             setSentStatus(false);
-            setIdSelected('');
+            selectId('');
         }
     }
 
@@ -46,33 +40,29 @@ const SendGift = ({type}) => {
             {sentStatus ? ( 
             <form onSubmit={(event) => handleSubmit(event)} className={`${styles.formBlock}`}>
             {idSelected == '' ? (
-                <p className={`${styles.selectedName}`}>Aún no has seleccionado un regalo</p>
-            ): <p className={`${styles.selectedName}`}>Has seleccionado: {gift.gName}</p>}
-            <div className={`${styles.inputNameBlock}`}>
+                <p className={`${styles.selectedName}`}>Aún no has seleccionado un regalo <br/> _______</p>
+            ): <p className={`${styles.selectedName}`}>Has seleccionado: <br/>{gift.gName}</p>}
+            <div className={`${styles.inputBlock} ${styles.inputNameBlock}`}>
                 <label htmlFor="exampleInputEmail1">Nombre y Apellido:</label>
                 <input type="name" id="IngresarNombre" aria-describedby="emailHelp" placeholder="Ingresar Nombre" onChange={e => setName(e.target.value)}/>
             </div>
-            <div className={`${styles.inputNoteBlock}`}>
-                <label htmlFor="exampleInputEmail1">Si quieres puedes dejarnos un mensaje (opcional)</label>
-                <input type="msg" id="IngresarMensaje" aria-describedby="emailHelp" placeholder="" onChange={e => setMsg(e.target.value)}/>
+            <div className={`${styles.inputBlock} ${styles.inputNoteBlock}`}>
+                <label htmlFor="exampleInputEmail1">Notita (opcional)</label>
+                <textarea name="Text1" cols="10" rows="3" type="msg" id="IngresarMensaje" aria-describedby="emailHelp" placeholder="" onChange={e => setMsg(e.target.value)}/>
             </div>
             {isOk === 'noName' && (
-                <div className={`${styles.alertNotSelected}`} role="alert">
-                    <div>
-                        Agrega tu nombre para confirmar el regalo
-                    </div>
+                <div className={`${styles.alertNotSelectedBlock}`} role="alert">
+                    Agrega tu nombre para confirmar el regalo
                 </div>
             )}
             {isOk === 'noSelected' && (
-                <div className={`${styles.alertNotSelected}`} role="alert">
-                    <div>
-                        Selecciona un regalo para continuar
-                    </div>
+                <div className={`${styles.alertNotSelectedBlock}`} role="alert">
+                    Selecciona un regalo para continuar
                 </div>
             )}
-            <button type="submit" className="btn btn-primary submitBtn">CONFIRMAR</button>
+            <button type="submit" className={`${styles.submitButton}`}>CONFIRMAR</button>
             </form>
-            ) : (<p className='thankMsg'><b>Muchas gracias!!!</b> Tu obsequio nos ayuda mucho ❤️​</p>)}
+            ) : (<p className={`${styles.thanksMsg}`}><b>Muchas gracias!!!</b> Tu obsequio nos ayuda mucho ❤️​</p>)}
         </>
     );
 }

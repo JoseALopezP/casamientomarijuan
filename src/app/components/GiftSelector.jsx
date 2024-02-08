@@ -17,7 +17,7 @@ export default function GiftSelector () {
         <section className={`${styles.giftSelectorBlock}`}>
             {gifts.map((itm)=>{
                 return(
-                    <GiftCard item={itm} clicked={clicked()} key={itm.id}/>
+                    <GiftCard item={itm} clicked={clicked} key={itm.id}/>
                 )
             })}
             <div ref={ref}>

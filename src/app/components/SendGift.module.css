@@ -1,0 +1,53 @@
+.formBlock{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+.inputBlock{
+    display: inline-flex;
+    flex-direction: column;
+    font-size: larger;
+    width: 100%;
+}
+.inputBlock input{
+    margin: 5px 0;
+    height: 40px;
+    text-align: center;
+    font-size: large;
+}
+.inputNoteBlock textarea{
+    height: 180px;
+    font-size: large;
+}
+
+.selectedName{
+    text-align: center;
+    font-weight: bold;
+    color: #991d32;
+}
+.submitButton{
+    align-self: center;
+    margin: 10px 0 10px;
+    font-size: large;
+    width: 80%;
+    height: 60px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    border: solid #EFEBEA;
+    color: #EFEBEA;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: #991D31;
+    padding: 6px 0 6px 0;
+}
+.submitButton b{
+    font-size: small;
+}
+.alertNotSelectedBlock{
+    color: #991d32;
+    font-weight: bolder;
+    text-align: center;
+}

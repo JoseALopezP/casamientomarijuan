@@ -1,8 +1,8 @@
 'use client'
 import styles from './Gift.module.css'
-import { useState, useContext } from 'react'
+import { useState} from 'react'
 import GiftSelector from './GiftSelector';
-import { TransferSelector } from './TransferSelector';
+import TransferSelector from './TransferSelector';
 import { DataContextProvider } from "@/context/DataContext";
 
 export function Gift () {
@@ -13,7 +13,7 @@ export function Gift () {
         <section className={`${styles.giftBlock}`}>
             {giftView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setGiftView(false)}>X</button>
-                <p className={`${styles.textExplained}`}>Podés elegir 1 regalo y dejarnos una notita (hay enlaces de ejemplo)</p>
+                <p className={`${styles.textExplained}`}>Podés elegir 1 regalo y dejarnos una notita <br/> (hay enlaces de ejemplo)</p>
                 <GiftSelector/>
             </div>}
             {transferView && <div className={`${styles.giftViewBlock}`}>

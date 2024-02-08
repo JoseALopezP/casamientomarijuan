@@ -18,7 +18,7 @@ export default function Home({params}) {
       <Schedule dinner={params.dinner}/>
       <Places quant={params.guests}/>
       <Gift/>
-      <Confirmation/>
+      <Confirmation quantity={params.guests}/>
     </main>
   )
 }

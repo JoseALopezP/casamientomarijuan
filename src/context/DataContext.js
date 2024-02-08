@@ -59,13 +59,13 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
     const addNote = (data) => {
         addData('notesList', data)
     }
-    const addGifted = async(data) => {
+    const addGifted = (data) => {
         addData('giftedList', data)
     }
-    const addTransfered = async(data) => {
+    const addTransfered = (data) => {
         addData('transferedList', data)
     }
-    const addGuest = async(data) => {
+    const addGuest = (data) => {
         addData('guestList', data)
     }
 
