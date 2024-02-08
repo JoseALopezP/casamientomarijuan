@@ -1,5 +1,5 @@
 import React, { createContext, useState} from "react";
-import {doc, updateDoc, getFirestore} from 'firebase/firestore';
+import {doc, updateDoc, getFirestore, increment} from 'firebase/firestore';
 import firebase_app from "@/firebase/config";
 import getCollection from "@/firebase/firestore/getCollection";
 import addData from "@/firebase/firestore/addData";
@@ -10,6 +10,7 @@ const {Provider} = DataContext;
 const db = getFirestore(firebase_app)
 export const DataContextProvider = ({defaultValue = [], children}) => {
     const [gifts, setGifts] = useState(defaultValue);
+    const [gift, setGift] = useState(defaultValue);
     const [notes, setNotes] = useState(defaultValue);
     const [gifteds, setGifteds] = useState(defaultValue);
     const [transfers, setTransfers] = useState(defaultValue);
@@ -33,19 +34,21 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         setGuests(await getCollection('guestList'))
     }
 
-    const selectId = (id) =>{
+    const selectId = async(id) =>{
         if(id === idSelected){
             setIdSelected('');
+            setGift('');
         }else{
             setIdSelected(id);
+            setGift(gifts.find(x => x.id == id));
         }
         
     }
     
-    const selectGift = async() => {
+    const selectGift = async(data) => {
         const result = doc(db, "giftList", idSelected);
         await updateDoc(result, {
-        status: false
+        stock: increment(-1)
         });
         addGifted(data)
     }
@@ -76,7 +79,7 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         const result1 = doc(db, "giftedList", id);
         const result2 = doc(db, "giftList", result1.gid);
         await updateDoc(result2, {
-        status: true
+        stock: increment(1)
         });
         await removeData('giftedList', id)
     }
@@ -105,6 +108,7 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         removeGifted,
         removeTransfered,
         removeGuest,
+        gift,
         gifts,
         notes,
         gifteds,

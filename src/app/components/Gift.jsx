@@ -13,12 +13,12 @@ export function Gift () {
         <section className={`${styles.giftBlock}`}>
             {giftView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setGiftView(false)}>X</button>
-                <p>Podés elegir 1 o más regalos y dejarnos una notita (tienen enlaces de ejemplo)</p>
+                <p className={`${styles.textExplained}`}>Podés elegir 1 regalo y dejarnos una notita (hay enlaces de ejemplo)</p>
                 <GiftSelector/>
             </div>}
             {transferView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setTransferView(false)}>X</button>
-                <p>Nos podés transferir a: y dejar el número de transferencia junto con un mensajito</p>
+                <p className={`${styles.textExplained}`}>Nos podés transferir a: y dejar el número de transferencia junto con un mensajito</p>
                 <TransferSelector/>
             </div>}
             <svg className={`${styles.giftIcon}`} width="60px" height="60px" viewBox="0 0 24 24" fill='#991D31'>

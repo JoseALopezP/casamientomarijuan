@@ -1,3 +1,46 @@
 .giftCardBlock{
-    background-color: blue;
+    width: calc(100% - 10px);
+    margin: 2px 5px 2px 5px;
+    display: inline-flex;
+    flex-direction: column;
+    border: solid #991d326f;
+    border-width: 3px 0 3px 0;
+    padding: 4px 0 4px 0;
+    border-radius: 2px;
+}
+
+.itemName{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+}
+.giftCardBlock a{
+    text-decoration: none;
+    color: #000;
+}
+
+.giftCardBlockSelected{
+    border: solid #991d32;
+    border-width: 3px;
+    margin-left: 3px;
+    border-radius: 4px;
+}
+
+.giftedCardBlock{
+    opacity: .2;
+}
+.giftedCardBlock .itemName{
+    text-decoration: line-through;
+}
+
+.linksBlock{
+    width: 100%;
+    display: inline-flex;
+    justify-content:space-evenly;
+    opacity: .5;
+}
+
+.spacer{
+    margin: 0;
 }
