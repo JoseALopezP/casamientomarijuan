@@ -1,4 +1,6 @@
 .headerBlock img{
-    width: 70vw;
+    width: 100vw;
     height: auto;
+    margin-bottom: -120px;
+    transform: rotate(90deg);
 }
