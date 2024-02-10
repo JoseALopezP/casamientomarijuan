@@ -14,6 +14,7 @@ const ConfirmationSelector = ({quantity}) => {
     const {addGuest} = useContext(DataContext);
 
     const handlePush = () =>{
+        document.getElementById('confirmationForm').reset();
         const newGuest = {
             name: name,
             lastName: lastName,
@@ -25,16 +26,20 @@ const ConfirmationSelector = ({quantity}) => {
     }
 
     const handleSubmit = async(event) => {
-        handlePush()
         event.preventDefault();
         const now = new Date()
-        now.setHours(10, 0, 0, 0)
         const timestamp = Timestamp.fromDate(now);
-        const data = {
+        const newGuest = {
+            name: name,
+            lastName: lastName,
+            dni: dni,
+            diet: diet
+        }
+        const data = await {
             "date": timestamp,
             "guests": [...guests, newGuest]
         }
-        addGuest(data);
+        await addGuest(data);
         setSentStatus(false);
         setleft(left -1)
     }
@@ -43,7 +48,7 @@ const ConfirmationSelector = ({quantity}) => {
         <>
             {(left == 1) ? (<p className={`${styles.selectedName}`}>Queda {left} lugar para ti</p>) : (<p className={`${styles.selectedName}`}>Quedan {left} lugares para ti</p>)}
             {(sentStatus) ? (
-            <form onSubmit={(event) => handleSubmit(event)} className={`${styles.formBlock}`}>
+            <form id='confirmationForm' onSubmit={(event) => handleSubmit(event)} className={`${styles.formBlock}`}>
                 <div className={`${styles.inputBlock} ${styles.inputNameBlock}`}>
                     <label htmlFor="name">Nombre:</label>
                     <input type="name" id="IngresarNombre" placeholder="Ingresar Nombre" onChange={e => setName(e.target.value)}/>
@@ -60,7 +65,7 @@ const ConfirmationSelector = ({quantity}) => {
                     <label htmlFor="exampleInputEmail1">Ingresa dieta especial (opcional):</label>
                     <input type="lastName" id="IngresarApellido" onChange={e => setDiet(e.target.value)}/>
                 </div>
-            {(left > 1) && <button type="button" className={`${styles.submitButton}`} onClick={handlePush}>AGREGAR</button>}
+                {(left > 1) && <button onClick={handlePush} type="reset" className={`${styles.submitButton}`} >AGREGAR</button>}
             <button type="submit" className={`${styles.submitButton}`}>LISTO <br/><b>(NO AGREGAR MÁS)</b></button>
             </form>
             ) : (<p className={`${styles.thanksMsg}`}><b>Confirmado!!!</b> Te esperamos ❤️​</p>)}

@@ -18,7 +18,6 @@ const SendGift = ({type}) => {
             setIsOk('noName')
         }else{
             const now = new Date()
-            now.setHours(10, 0, 0, 0)
             const timestamp = Timestamp.fromDate(now);
             const data = {
                 "date": timestamp,
