@@ -1,7 +1,10 @@
 .invitationSection{
     display: flex;
+    z-index: 20;
     justify-content: center;
     width: calc(100vw - (100vw - 100%));
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 .invitationBlock{
     display: inline-flex;
@@ -53,7 +56,6 @@
 .sideBouqet2{
     position: relative;
     right: 18%;
-    top: -40px;
     width: 30%;
     height: 30%;
 }
