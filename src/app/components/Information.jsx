@@ -7,10 +7,7 @@ export function Information () {
         <section className={`${styles.informationSection}`}>
             <div className={`${styles.informationBlock}`}>
             <div className={`${styles.dateInformationBlock}`}>
-                <svg width="100" height="50" fillOpacity="0">
-                    <path d="M 0 50 C 0 50, 150 0, 150 150" id='curve'></path>
-                    <text className={`${styles.dateInformationMonth}`}><textPath href='#curve' fillOpacity="1">ABRIL</textPath></text>
-                </svg>
+                <text className={`${styles.dateInformationMonth}`}>ABRIL</text>
                 <div className={`${styles.dateInformationText}`}>
                 <p className={`${styles.dateTextBox}`}>SABADO</p>
                 <p className={`${styles.dateDayBox} ${playfair.className}`}>6</p>
@@ -19,14 +16,14 @@ export function Information () {
             </div>
             <h5 className={`${styles.dateInfoHour}`}>19:45 HS</h5>
             <h4 className={`${styles.dateInfoTitle}`}>CEREMONIA</h4>
-            <p className={`${styles.dateInfoPlace}`}>PARROQUIA NUESTRA SEÑORA DEL VALLE</p>
-            <p className={`${styles.dateInfoUbi}`}><i>Av Roca y Coronado</i></p>
-            <Link href="https://en.wikipedia.org/wiki/Next.js" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
+            <p className={`${styles.dateInfoPlace}`}>PARROQUIA SANTA LUCÍA</p>
+            <p className={`${styles.dateInfoUbi}`}><i>Gral. Paz y Ramón Franco</i></p>
+            <Link target="_blank" href="https://maps.app.goo.gl/12mcXTTXgNSMR94T6" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
             <h5 className={`${styles.dateInfoHour}`}>21:00 HS</h5>
-            <h4 className={`${styles.dateInfoTitle}`}>RECEPCION</h4>
+            <h4 className={`${styles.dateInfoTitle}`}>RECEPCIÓN</h4>
             <p className={`${styles.dateInfoPlace}`}>SALÓN GALANA EVENTOS</p>
-            <p className={`${styles.dateInfoUbi}`}><i>Av. Roca y Coronado</i></p>
-            <Link href="https://en.wikipedia.org/wiki/Next.js" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
+            <p className={`${styles.dateInfoUbi}`}><i>Balcarce 198</i></p>
+            <Link target="_blank" href="https://maps.app.goo.gl/QQDhXNS22eEAaMjS8" className={`${styles.dateInfoUbiTag}`}>VER UBICACION</Link>
             </div>
         </section>
     )

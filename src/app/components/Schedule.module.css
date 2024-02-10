@@ -20,7 +20,7 @@
 }
 .infoScheduleBlock, .iconsInfoBlock{
     display: flex;
-    width: 80px;
+    width: 40%;
 }
 .iconsInfoBlock{
     flex-flow: column nowrap;
@@ -28,9 +28,11 @@
 }
 .iconsInfoBlock svg{
     display: flex;
-    margin-bottom: 38px;
-    width: 60px;
-    height: 60px;
+    position: relative;
+    left: 40px;
+    margin-bottom: 12px;
+    width: 80px;
+    height: 80px;
     fill: #411019;
     stroke: #411019;
 }
@@ -45,7 +47,7 @@
 .infoScheduleBlock{
     display: inline-flex;
     flex-direction: column;
-    margin-top: 28px;
+    margin: 28px 0 0 10px;
     color: #411019;
 }
 .iconsInfoBlock svg{
@@ -56,6 +58,7 @@
     line-height: 8px;
 }
 .infoScheduleBlock span{
+    font-size: 24px;
     font-weight: 800;
 }
 .infoScheduleBlock p{
@@ -75,6 +78,6 @@
 }
 .scheduleBlockDCena .infoScheduleBlock p{
     margin-bottom: 86px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
 }

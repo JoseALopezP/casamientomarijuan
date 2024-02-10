@@ -1,12 +1,7 @@
-import { WindSong } from 'next/font/google'
+import { windsong } from '../ui/fonts'
 import styles from './Invitation.module.css'
 import Image from 'next/image'
 
-const windsong = WindSong({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: '500'
-  })
 
 export function Invitation () {
     return (

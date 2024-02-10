@@ -1,11 +1,18 @@
 .photoBlock{
-    width: 100%;
-    display: flex;
+    width: calc(100vw - 100% + 100vw);
+    display: flex-box;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content : space-around;
     overflow: hidden;
 }
 .photoBlock img{
+    flex:1 1 auto;
+    display:flex;
+    flex-direction :column;
+    justify-content : center;
+    align-items : center;
+    height: 80vh;
     width: auto;
-    height: 75vh;
-    position: relative;
-    left: -440px;
 }

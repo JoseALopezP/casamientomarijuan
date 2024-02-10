@@ -6,24 +6,33 @@
 .presentationBlock{
     display: inline-flex;
     flex-flow: column nowrap;
-    width: 70%;
+    width: 90%;
     text-align: center;
 }
 
 .presentationBlock h1{
-    font-size: 92px;
+    font-size: 148px;
     margin: 10px;
+}
+.presentationBlock h1 b{
+    font-size: 82px;
 }
 
 .presentationQuote{
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 42px;
+    font-style: italic;
+    font-weight: 100;
     margin-bottom: 0;
+    color: #00000090;
 }
 
 .presentationBlock span{
-    font-size: 18px;
-    letter-spacing: 2px;
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    letter-spacing: 6px;
     transform: scale(1, .95);
-    margin: 30px 0 70px 0;
+    margin: 130px 0 170px 0;
+    vertical-align: middle;
 }

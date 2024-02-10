@@ -11,20 +11,27 @@
     flex-flow: column nowrap;
     align-items: center;
     position: relative;
-    top: -200px;
-    margin-bottom: -160px;
+    top: -250px;
+    margin-bottom: -80px;
+}
+.confirmationTitle{
+    font-size: 32px;
+    margin: 20px 0;
 }
 .confirmationText{
     width: 80%;
+    font-size: 18px;
+    color: #00000090;
     text-align: center;
+    margin: 30px 0 0 0;
 }
 .confirmationButton{
     align-self: center;
-    margin-bottom: 10px;
-    width: 40%;
-    height: 60px;
-    font-weight: 600;
+    width: 60%;
+    height: 80px;
+    font-weight: 500;
     text-align: center;
+    font-size: 24px;
     border-radius: 8px;
     border: solid #EFEBEA;
     color: #EFEBEA;
@@ -49,16 +56,19 @@
     border-radius: 8px;
 }
 
-.closeConfirmationView{
+.closeView{
+    z-index: 900;
     position: fixed;
-    width: 10vw;
-    height: 10vw;
-    font-size: x-large;
-    left: 80vw;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    left: calc(100% - 60px);
+    top: 0px;
     background-color: #991D31;
     color: #EFEBEA;
     font-weight: bolder;
     border-radius: 8px;
+    padding: 4px 8px 4px 8px;
     text-align: center;
     border: none;
 }
