@@ -90,10 +90,10 @@ export function Schedule({dinner}) {
             <div className={`${styles.infoScheduleBlock}`}>
                 <span>19:45</span>
                 <p className={`${windsong.className}`}>Ceremonia</p>
-                <span>21:00</span>
+                <span>20:45</span>
                 <p className={`${windsong.className}`}>Saludos</p>
-                {(dinner=='cena') && (<><span>22:00</span> <p className={`${windsong.className}`}>Civil</p> <span>22:30</span> <p className={`${windsong.className}`}>Cena</p></>)}
-                <span>00:30</span>
+                {(dinner=='cena') && (<><span>22:00</span> <p className={`${windsong.className}`}>Civil</p> <span>21:15</span> <p className={`${windsong.className}`}>Cena</p></>)}
+                <span>00:00</span>
                 <p className={`${windsong.className}`}>Fiesta</p>
             </div>
             </div>

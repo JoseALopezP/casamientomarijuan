@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     width: calc(100vw - (100vw - 100%));
+    overflow-x: ;
 }
 .invitationBlock{
     display: inline-flex;
@@ -48,12 +49,11 @@
     top: 140px;
     width: 30%;
     height: 30%;
-    left: 80px;
 }
 
 .sideBouqet2{
     position: relative;
-    right: 86px;
+    right: 18%;
     top: -40px;
     width: 30%;
     height: 30%;
