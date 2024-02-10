@@ -21,7 +21,7 @@ export function Gift () {
             </>}
             {transferView && <div className={`${styles.giftViewBlock}`}>
                 <button type="button" className={`${styles.closeView}`} onClick={() => setTransferView(false)}>X</button>
-                <p className={`${styles.textExplained}`}>Nos podés transferir a "minuto.aguila.rodeo" y dejar el número de transferencia junto con un mensajito</p>
+                <p className={`${styles.textExplained}`}>Nos podés transferir a minuto.aguila.rodeo y dejar el número de transferencia junto con un mensajito</p>
                 <TransferSelector/>
             </div>}
             <svg className={`${styles.giftIcon}`} width="120px" height="120px" viewBox="0 0 24 24" fill='#991D31'>
