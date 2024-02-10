@@ -1,5 +1,6 @@
 .giftBlock{
     position: relative;
+    z-index: 20;
     top: -150px;
     width: 100%;
     display: inline-flex;
@@ -35,7 +36,6 @@
 
 .giftViewBlock{
     position: fixed;
-    z-index: 18;
     top: 5vh;
     width: 80vw;
     height: 90vh;
