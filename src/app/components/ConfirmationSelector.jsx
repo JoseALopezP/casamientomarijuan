@@ -33,7 +33,7 @@ const ConfirmationSelector = ({quantity, dinner}) => {
         const newGuest = {
             name: name,
             lastName: lastName,
-            after: (dinner !== 'dcena' ? true : false),
+            after: (dinner == 'dcena' ? true : false),
             dni: dni,
             diet: diet
         }

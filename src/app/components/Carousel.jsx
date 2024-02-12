@@ -11,8 +11,8 @@ export function Carousel () {
                 {Array.from(Array(12).keys()).map((el) =>{
                     return(<Image
                         src={'/images/photoshoot/' +(el+1)+'.png'}
-                        width={1921}
-                        height={1070}
+                        width={1920}
+                        height={1080}
                         alt="Image"
                         key={el}
                     />)    

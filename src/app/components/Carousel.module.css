@@ -1,14 +1,91 @@
 .carouselBlock{
     overflow-x: hidden;
+    
 }
 .carouselSlide{
     display: inline-flex;
     flex-direction: row;
-    transform: translateX(-2.5%);
-    height: 70vh;
-    width: auto;
+    animation: principalMovement 80s forwards infinite;
 }
 .carouselSlide img{
-    height: 70vh;
-    width: auto;
+    height: auto;
+    width: 300vw;
+}
+
+@keyframes principalMovement {
+    0%{
+        transform: translateX(-75vw);
+    }
+    7.17%{
+        transform: translateX(-125vw);
+    }
+    8.3%{
+        transform: translateX(-370vw);
+    }
+    15.49%{
+        transform: translateX(-420vw);
+    }
+    16.66%{
+        transform: translateX(-650vw);
+    }
+    23.83%{
+        transform: translateX(-750vw);
+    }
+    24.99%{
+        transform: translateX(-950vw);
+    }
+    32.16%{
+        transform: translateX(-1020vw);
+    }
+    33.33%{
+        transform: translateX(-1280vw);
+    }
+    40.49%{
+        transform: translateX(-1350vw);
+    }
+    41.66%{
+        transform: translateX(-1550vw);
+    }
+    48.83%{
+        transform: translateX(-1650vw);
+    }
+    49.99%{
+        transform: translateX(-1850vw);
+    }
+    57.16%{
+        transform: translateX(-1950vw);
+    }
+    58.33%{
+        transform: translateX(-2150vw);
+    }
+    65.49%{
+        transform: translateX(-2250vw);
+    }
+    66.66%{
+        transform: translateX(-2450vw);
+    }
+    73.83%{
+        transform: translateX(-2550vw);
+    }
+    74.99%{
+        transform: translateX(-2750vw);
+    }
+    82.17%{
+        transform: translateX(-2850vw);
+    }
+    83.33%{
+        transform: translateX(-3080vw);
+    }
+    90.49%{
+        transform: translateX(-3120vw);
+    }
+    91.66%{
+        transform: translateX(-3380vw);
+    }
+    98.825%{
+        transform: translateX(-3420vw);
+    }
+    100%{
+        transform: translateX(-75vw);
+    }
 }
