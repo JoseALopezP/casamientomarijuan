@@ -6,6 +6,7 @@ import { Schedule } from "../../components/Schedule";
 import { Places } from "../../components/Places";
 import { Gift } from "../../components/Gift";
 import { Confirmation } from "../../components/Confirmation";
+import { Carousel } from "@/app/components/Carousel";
 
 
 export default function Home({params}) {
@@ -14,11 +15,12 @@ export default function Home({params}) {
       <Presentation/>
       <Photo/>
       <Invitation/>
+      <Carousel/>
       <Information/>
       <Schedule dinner={params.dinner}/>
       <Places quant={params.guests}/>
       <Gift/>
-      <Confirmation quantity={params.guests}/>
+      <Confirmation quantity={params.guests} dinner={params.dinner}/>
     </main>
   )
 }

@@ -3,7 +3,7 @@ import styles from './SendGift.module.css'
 import { DataContext } from '@/context/DataContext';
 import { Timestamp } from 'firebase/firestore';
 
-const ConfirmationSelector = ({quantity}) => {
+const ConfirmationSelector = ({quantity, dinner}) => {
     const [guests, setGuests] = useState([])
     const [left, setleft] = useState(quantity)
     const [diet, setDiet] = useState('')
@@ -18,6 +18,7 @@ const ConfirmationSelector = ({quantity}) => {
         const newGuest = {
             name: name,
             lastName: lastName,
+            after: (dinner !== 'dcena' ? true : false),
             dni: dni,
             diet: diet
         }
@@ -32,6 +33,7 @@ const ConfirmationSelector = ({quantity}) => {
         const newGuest = {
             name: name,
             lastName: lastName,
+            after: (dinner !== 'dcena' ? true : false),
             dni: dni,
             diet: diet
         }

@@ -7,7 +7,7 @@ import { windsong } from '../ui/fonts'
 export function Schedule({dinner}) {
     return (
         <section className={`${styles.containerSchedule}`}>
-            <div className={`${dinner=='cena' ? styles.scheduleBlockCena : styles.scheduleBlockDCena}`}>
+            <div className={`${dinner=='ccena' ? styles.scheduleBlockCena : styles.scheduleBlockDCena}`}>
             <div className={`${styles.iconsInfoBlock}`}>
                 <svg width="80px" height="80px" viewBox="0 0 48 48" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M23.4481 13.1661C23.7827 12.9446 24.2173 12.9446 24.5519 13.1661L31.3519 17.6661C31.6317 17.8513 31.8 18.1644 31.8 18.5V22.8009L41.2658 25.411C41.6995 25.5306 42 25.9251 42 26.375V42H40V27.1366L30.5342 24.5265C30.1005 24.4069 29.8 24.0124 29.8 23.5625V19.0374L24 15.1991L18.2 19.0374V23.5625C18.2 23.9758 17.9457 24.3466 17.5601 24.4954L8 28.1859V42H6V27.5C6 27.0867 6.25428 26.7159 6.63987 26.5671L16.2 22.8766V18.5C16.2 18.1644 16.3683 17.8513 16.6481 17.6661L23.4481 13.1661Z"/>
@@ -44,7 +44,7 @@ export function Schedule({dinner}) {
                     c8.281,10.915,14.827,22.771,19.552,35.288l-20.561-3.667c-4.738-9.853-10.8-19.107-18.086-27.486
                     C324.198,102.932,323.871,102.573,323.549,102.21z M354.767,442.885v-37.028l17.38,13.843v23.185H354.767z"/>
                 </svg>
-                {dinner=='cena'&&
+                {dinner=='ccena'&&
                 <>
                 <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" >
                 <path stroke='none' fillRule="evenodd" clipRule="evenodd" d="M6 2C5.44772 2 5 2.44772 5 3V21C5 21.5523 5.44771 22 6 22H18C18.5523 22 19 21.5523 19 21V3C19 2.44772 18.5523 2 18 2H6ZM3 3C3 1.34315 4.34315 0 6 0H18C19.6569 0 21 1.34314 21 3V21C21 22.6569 19.6569 24 18 24H6C4.34315 24 3 22.6569 3 21V3ZM8.25 4.44232C8.01755 4.17216 7.66222 4 7.26562 4C6.56918 4 6 4.53088 6 5.19111C6 5.79154 6.35648 6.34854 6.76709 6.80297C7.18353 7.26386 7.69434 7.66115 8.07724 7.94376C8.17883 8.01875 8.32117 8.01875 8.42276 7.94376C8.80566 7.66115 9.31647 7.26386 9.73291 6.80297C10.1435 6.34854 10.5 5.79154 10.5 5.19111C10.5 4.53088 9.93082 4 9.23438 4C8.83778 4 8.48245 4.17216 8.25 4.44232ZM14.7656 16C15.1622 16 15.5175 16.1722 15.75 16.4423C15.9825 16.1722 16.3378 16 16.7344 16C17.4308 16 18 16.5309 18 17.1911C18 17.7915 17.6435 18.3485 17.2329 18.803C16.8165 19.2639 16.3057 19.6611 15.9228 19.9438C15.8212 20.0187 15.6788 20.0187 15.5772 19.9438C15.1943 19.6611 14.6835 19.2639 14.2671 18.803C13.8565 18.3485 13.5 17.7915 13.5 17.1911C13.5 16.5309 14.0692 16 14.7656 16Z" fill="#000000"/>
@@ -81,7 +81,7 @@ export function Schedule({dinner}) {
             </div>
             <div className={`${styles.divisonScheduleBlock}`}>
                 <Image
-                    src={dinner=='cena'?'/images/pathSchedule.svg' : '/images/pathScheduleDespues.svg'}
+                    src={dinner=='ccena'?'/images/pathSchedule.svg' : '/images/pathScheduleDespues.svg'}
                     width={200}
                     height={500}
                     alt="division"
@@ -92,7 +92,7 @@ export function Schedule({dinner}) {
                 <p className={`${windsong.className}`}>Ceremonia</p>
                 <span>20:45</span>
                 <p className={`${windsong.className}`}>Saludos</p>
-                {(dinner=='cena') && (<><span>21:15</span> <p className={`${windsong.className}`}>Civil</p> <span>22:00</span> <p className={`${windsong.className}`}>Cena</p></>)}
+                {(dinner=='ccena') && (<><span>21:15</span> <p className={`${windsong.className}`}>Civil</p> <span>22:00</span> <p className={`${windsong.className}`}>Cena</p></>)}
                 <span>00:00</span>
                 <p className={`${windsong.className}`}>Fiesta</p>
             </div>

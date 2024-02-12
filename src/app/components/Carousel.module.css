@@ -1,0 +1,14 @@
+.carouselBlock{
+    overflow-x: hidden;
+}
+.carouselSlide{
+    display: inline-flex;
+    flex-direction: row;
+    transform: translateX(-2.5%);
+    height: 70vh;
+    width: auto;
+}
+.carouselSlide img{
+    height: 70vh;
+    width: auto;
+}

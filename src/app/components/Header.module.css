@@ -1,6 +1,10 @@
+.headerBlock{
+    width: calc(100vw - 100% + 100%);
+    overflow: hidden;
+}
 .headerBlock img{
-    width: 100vw;
     height: auto;
-    margin-bottom: -120px;
+    width: 100%;
     transform: rotate(90deg);
+
 }

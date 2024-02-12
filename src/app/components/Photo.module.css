@@ -1,5 +1,5 @@
 .photoBlock{
-    width: calc(100vw - 100% + 100vw);
+    width: calc(100vw - 100% + 100%);
     z-index: 10;
     display: flex-box;
     display : flex;

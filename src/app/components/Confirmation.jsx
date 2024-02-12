@@ -5,7 +5,7 @@ import styles from './Confirmation.module.css'
 import Image from 'next/image'
 import { DataContextProvider } from "@/context/DataContext";
 
-export function Confirmation ({quantity}) {
+export function Confirmation ({quantity, dinner}) {
     const [confirmationView, setConfirmationView] = useState(false);
     return (
         <>
@@ -13,7 +13,7 @@ export function Confirmation ({quantity}) {
         {confirmationView && 
         <div className={`${styles.confirmationViewBlock}`}>
             <button type="button" className={`${styles.closeView}`} onClick={() => setConfirmationView(false)}>X</button>
-            <ConfirmationSelector quantity={quantity}/>
+            <ConfirmationSelector quantity={quantity} dinner={dinner}/>
         </div>}
         <section className={`${styles.confirmationBlock}`}>
             <Image
