@@ -5,7 +5,7 @@
 .carouselSlide{
     display: inline-flex;
     flex-direction: row;
-    animation: principalMovement 80s forwards infinite;
+    animation: principalMovement 120s forwards infinite;
 }
 .carouselSlide img{
     height: auto;
