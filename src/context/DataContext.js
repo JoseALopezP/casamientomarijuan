@@ -10,11 +10,13 @@ const {Provider} = DataContext;
 const db = getFirestore(firebase_app)
 export const DataContextProvider = ({defaultValue = [], children}) => {
     const [gifts, setGifts] = useState(defaultValue);
+    const [dinner, setDinner] = useState(0);
+    const [afterDinner, setAfterDinner] = useState(0);
     const [gift, setGift] = useState(defaultValue);
     const [notes, setNotes] = useState(defaultValue);
     const [gifteds, setGifteds] = useState(defaultValue);
     const [transfers, setTransfers] = useState(defaultValue);
-    const [confirmeds, setGuests] = useState(defaultValue);
+    const [guests, setGuests] = useState(defaultValue);
     const [idSelected, setIdSelected] = useState('');
     
 
@@ -31,7 +33,18 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         setTransfers(await getCollection('transferedList'))
     }
     const updateGuests = async() => {
-        setGuests(await getCollection('guestList'))
+        setGuests(await getCollection('guestList'));
+        let d = 0; 
+        let a = 0;
+        guests.forEach(el =>{
+            if(el.after){
+                a += el.guests.length
+            }else{
+                d += el.guests.length
+            }
+        });
+        setDinner(d);
+        setAfterDinner(a);
     }
 
     const selectId = async(id) =>{
@@ -113,8 +126,10 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         notes,
         gifteds,
         transfers,
-        confirmeds,
-        idSelected
+        guests,
+        idSelected,
+        dinner,
+        afterDinner
     }
     return(
         <>

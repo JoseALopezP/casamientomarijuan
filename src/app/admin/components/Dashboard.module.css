@@ -1,0 +1,84 @@
+.graphsSection{
+    --dinner: 0;
+    --afterDinner: 0;
+    --gifteds: 0;
+    --transfers: 0;
+    --unread: 0;
+    --read: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    background-color: #f9fafbff;
+}
+.guestGraphBlock, .giftGraphBlock, .notesGraphBlock{
+    border: solid rgba(12, 11, 29, 0.01);
+}
+.division{
+    background-color: rgba(12, 11, 29, 0.052);
+    height: 4px;
+    width: 90%;
+}
+.graphBlock{
+    height: 170px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+    margin: 15px;
+    padding: 0;
+}
+
+.graphIcons{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.graph{
+    width: 50px;
+    height: auto;
+}
+.graphIcon{
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.graphIcon p{
+    font-size: 26px;
+    line-height: 6px;
+}
+.dinnerGraph, .dinner p{
+    color: #089173ff;
+}
+.afterGraph, .afterDinner p{
+    color: #f4aa60ff;
+}
+.giftGraph, .gifts p{
+    color: #368fffff;
+}
+.transferGraph, .transfers p{
+    color: #43286dff;
+}
+.graphLine{
+    height: 6px;
+    border-radius: 2px;
+    display: inline-flex;
+    margin: 0 5% 0 5%;
+}
+.dinnerGraphLine{
+    background-color: #089173ff;
+    width: calc(var(--dinner)/(var(--dinner) + var(--afterDinner)) *90%);
+}
+.afterDinnerGraphLine{
+    background-color: #f4aa60ff;
+    width: calc(var(--afterDinner)/(var(--dinner) + var(--afterDinner)) *90%);
+}
+.giftsGraphLine{
+    background-color: #368fffff;
+    width: calc(var(--gifteds)/(var(--gifteds) + var(--transfers)) *90%);
+}
+.transferGraphLine{
+    background-color: #43286dff;
+    width: calc(var(--transfers)/(var(--gifteds) + var(--transfers)) *90%);
+}
