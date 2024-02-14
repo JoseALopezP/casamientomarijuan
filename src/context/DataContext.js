@@ -45,10 +45,10 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         
     }
     
-    const selectGift = async(data) => {
+    const selectGift = async(data, oldStock) => {
         const result = doc(db, "giftList", idSelected);
         await updateDoc(result, {
-        stock: increment(-1)
+        stock: (oldStock - 1)
         });
         addGifted(data)
     }
@@ -75,11 +75,11 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
     const removeNote = async (id) => {
         removeData('notesList', id)
     }
-    const removeGifted = async (id) => {
+    const removeGifted = async (id, oldStock) => {
         const result1 = doc(db, "giftedList", id);
         const result2 = doc(db, "giftList", result1.gid);
         await updateDoc(result2, {
-        stock: increment(1)
+        stock: ServerValue.increment(1)
         });
         await removeData('giftedList', id)
     }

@@ -1,0 +1,26 @@
+.navBlock{
+    background-color:#0c0b1dff;
+    position: fixed;
+    bottom: 0px;
+    height: 80px;
+    width: calc(100vw - 10px);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+.navBlockItemsIcon{
+    width: 20%;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 8px;
+    
+}
+.navBlockItemsIconActive{
+    background-color: #358fffff;
+}
+.navBarIconSVG{
+    width: 70%;
+    height: auto;
+    color: #f9fafbff;
+}

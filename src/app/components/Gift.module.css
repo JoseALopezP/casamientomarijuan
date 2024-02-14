@@ -52,6 +52,7 @@
     margin: 40px 10px 30px 10px;
 }
 
+
 .closeView{
     z-index: 900;
     position: fixed;
@@ -74,4 +75,13 @@
     line-height: 26px;
     text-align: center;
     color: rgba(0, 0, 0, 0.792);
+}
+.textcbu{
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-self: center;
+    width: 80%;
+    text-align: start;
+    font-size: x-large;
 }

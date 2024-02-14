@@ -18,7 +18,6 @@ const ConfirmationSelector = ({quantity, dinner}) => {
         const newGuest = {
             name: name,
             lastName: lastName,
-            after: (dinner !== 'dcena' ? true : false),
             dni: dni,
             diet: diet
         }
@@ -33,12 +32,12 @@ const ConfirmationSelector = ({quantity, dinner}) => {
         const newGuest = {
             name: name,
             lastName: lastName,
-            after: (dinner == 'dcena' ? true : false),
             dni: dni,
             diet: diet
         }
         const data = await {
             "date": timestamp,
+            "after": (dinner == 'dcena' ? true : false),
             "guests": [...guests, newGuest]
         }
         await addGuest(data);

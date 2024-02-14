@@ -26,7 +26,7 @@ const SendGift = ({type}) => {
                 "gid": gift.id,
                 "gift": gift.gName
             }
-            await selectGift(data);
+            await selectGift(data, gift.stock);
             await updateGifts();
             setSentStatus(false);
             selectId('');
@@ -40,7 +40,14 @@ const SendGift = ({type}) => {
             <form onSubmit={(event) => handleSubmit(event)} className={`${styles.formBlock}`}>
             {idSelected == '' ? (
                 <p className={`${styles.selectedName}`}>Aún no has seleccionado un regalo <br/> _______</p>
-            ): <p className={`${styles.selectedName}`}>Has seleccionado: <br/>{gift.gName}</p>}
+            ): <><p className={`${styles.selectedName}`}>Has seleccionado: <br/><b>{gift.gName}</b></p>
+            <p className={`${styles.exampleText}`}>Aquí hay algunos ejemplos que nos gustaron de ese regalo</p>
+            <div className={`${styles.linksBlock}`}>
+                <a href={gift.link1} target="_blank">link 1</a>
+                <p className={`${styles.spacer}`}>&nbsp; | &nbsp;</p>
+                <a href={gift.link2} target="_blank">link 2</a>
+            </div>
+            </>}
             <div className={`${styles.inputBlock} ${styles.inputNameBlock}`}>
                 <label htmlFor="exampleInputEmail1">Nombre y Apellido:</label>
                 <input type="name" id="IngresarNombre" aria-describedby="emailHelp" placeholder="Ingresar Nombre" onChange={e => setName(e.target.value)}/>
