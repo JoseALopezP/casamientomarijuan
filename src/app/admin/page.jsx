@@ -2,10 +2,9 @@
 import { useEffect } from "react";
 import { useAuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
-import { NavBar } from "./components/NavBar";
 import { DataContextProvider } from "@/context/DataContext";
 import LinkGenerator from "./components/LinkGenerator";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./components/Dashboard";
 import styles from './globals.module.css'
 
 export default function Admin() {
