@@ -1,3 +1,4 @@
+'use client'
 import styles from './GuestList.module.css'
 import { useContext, useEffect } from 'react'
 import { DataContext } from '@/context/DataContext';
