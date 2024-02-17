@@ -20,7 +20,7 @@ export default function GuestList () {
                         <p>{guest.date.toDate().toLocaleDateString(undefined, dateOptions)}</p>
                         {guest.guests.map(itm =>{
                             return(
-                                <div className={`${styles.guestLine}`}>
+                                <div id={itm.dni} className={`${styles.guestLine}`}>
                                     <p>{itm.name}</p>
                                     <p>{itm.LastName}</p>
                                     <p>{itm.diet}</p>
