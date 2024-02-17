@@ -1,0 +1,9 @@
+.guestBlock{
+    width: 100%;
+}
+.guestLine{
+    display: inline-flex;
+    flex-direction: row;
+    width: 100vw - 100% + 100%;
+    justify-content: space-between;
+}

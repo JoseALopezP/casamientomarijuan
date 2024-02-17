@@ -6,6 +6,7 @@ import { NavBar } from "./components/NavBar";
 import { DataContextProvider } from "@/context/DataContext";
 import LinkGenerator from "./components/LinkGenerator";
 import Dashboard from "./components/dashboard";
+import styles from './globals.module.css'
 
 export default function Admin() {
     const { user } = useAuthContext()
@@ -14,10 +15,13 @@ export default function Admin() {
       if (user == null) router.push("/signin")
     }, [user])
     return (
+      <>
         <DataContextProvider>
-        <NavBar/>
-        <Dashboard/>
-        <LinkGenerator/>
+        <main className={`${styles.mainSection}`}>
+          <Dashboard/>
+          <LinkGenerator/>
+        </main>
         </DataContextProvider>
+      </>
     )
 }

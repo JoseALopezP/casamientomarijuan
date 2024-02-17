@@ -1,5 +1,52 @@
 .linkGeneratorSection{
     background-color: #f9fafbff;
     width: calc(100% - 10px);
-    height: 200px;
+    height: 333px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "dinner quantBlock"
+        "copy copy"
+        "link link";
+}
+.linkGeneratorSection{
+    border-radius: 5px;
+}
+.buttonDinner, .buttonAfterDinner{
+    color: #f9fafbff;
+    width: 90%;
+    height: calc(80% / 2);
+    margin: calc(10% / 8) 5% calc(10% / 4) 5%;
+    background-color: #ffffff;
+}
+.buttonDinnerActive, .buttonAfterDinnerActive{
+    background-color: #43286dff;
+}
+.quantityBlock{
+    grid-area: quantBlock;
+    display: inline-flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    
+}
+.quantityBox, .buttonPlus , .buttonMinus{
+    color: #FFFFFF;
+    width: calc(90% / 3);
+    margin: calc(10% / 6);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.quantityBox{
+    background-color: #ffffff;
+}
+.copyButton{
+    color: #ffffff;
+    width: 97.5%;
+    margin: 1.25% 2.5% 2.5% 2.5%;
+    grid-area: copy;
+}
+.linkBox{
+    grid-area: link;
 }
