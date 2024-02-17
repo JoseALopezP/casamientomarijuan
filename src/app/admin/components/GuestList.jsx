@@ -16,11 +16,11 @@ export default function GuestList () {
         <section className={`${styles.guestListSection}`}>
             {guests && guests.map((guest)=>{
                 return(
-                    <div id={guest.id} className={`${styles.guestBlock}`}>
+                    <div key={guest.id} className={`${styles.guestBlock}`}>
                         <p>{guest.date.toDate().toLocaleDateString(undefined, dateOptions)}</p>
                         {guest.guests.map(itm =>{
                             return(
-                                <div id={itm.dni} className={`${styles.guestLine}`}>
+                                <div key={itm.dni} className={`${styles.guestLine}`}>
                                     <p>{itm.name}</p>
                                     <p>{itm.LastName}</p>
                                     <p>{itm.diet}</p>
