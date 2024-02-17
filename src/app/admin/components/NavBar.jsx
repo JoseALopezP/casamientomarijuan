@@ -1,7 +1,7 @@
 import styles from './NavBar.module.css'
 import Link from 'next/link'
 
-export function NavBar () {
+export default function NavBar () {
     return (
         <>
         <header className={`${styles.navBlock}`}>
