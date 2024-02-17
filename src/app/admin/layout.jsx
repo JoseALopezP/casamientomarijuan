@@ -1,6 +1,6 @@
 'use client'
 import { AuthContextProvider } from '@/context/AuthContext'
-import { NavBar } from './components/NavBar'
+import {NavBar} from './components/NavBar'
 
 export default function AdminLayout({ children }) {
   return (
