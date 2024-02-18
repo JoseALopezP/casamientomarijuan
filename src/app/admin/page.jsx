@@ -6,6 +6,7 @@ import { DataContextProvider } from "@/context/DataContext";
 import LinkGenerator from "./components/LinkGenerator";
 import Dashboard from "./components/Dashboard";
 import styles from './globals.module.css'
+import { NavBar } from "./components/NavBar";
 
 export default function Admin() {
     const { user } = useAuthContext()
@@ -16,6 +17,7 @@ export default function Admin() {
     return (
       <>
         <DataContextProvider>
+        <NavBar/>
         <main className={`${styles.mainSection}`}>
           <Dashboard/>
           <LinkGenerator/>
