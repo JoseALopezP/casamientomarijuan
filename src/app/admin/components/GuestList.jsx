@@ -19,6 +19,11 @@ export default function GuestList () {
         setDeleteGuestBlock(true)
         setDeleteGuest(g)
     }
+    const handleConfirmDelete = () =>{
+        removeGuest(deleteGuest.id)
+        console.log(deleteGuest)
+        setDeleteGuestBlock(false)
+    }
     return (
         <section className={`${styles.guestListSection}`}>
             {deleteGuestBlock && (
@@ -29,7 +34,7 @@ export default function GuestList () {
                             <p>{itm.name} {itm.lastName}</p>
                         )
                     })}
-                    <button className={`${styles.deleteButtons}`} onClick={() => removeGuest(deleteGuest.id)}>ELIMINAR</button>
+                    <button className={`${styles.deleteButtons}`} onClick={() => handleConfirmDelete()}>ELIMINAR</button>
                     <button className={`${styles.deleteButtons} ${styles.cancelButtons}`}  onClick={() => setDeleteGuestBlock(false)}>CANCELAR</button>
                 </div>
             )}
