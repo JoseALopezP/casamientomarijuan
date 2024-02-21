@@ -31,13 +31,13 @@ export default function GuestList () {
                     <p className={`${styles.deleteExplained}`}>Se eliminarán los siguientes invitados:</p>
                     {deleteGuest.guests.map((itm) =>{
                         return(
-                            <p>{itm.name} {itm.lastName}</p>
+                            <p key={itm.id}>{itm.name} {itm.lastName}</p>
                         )
                     })}
                     <button className={`${styles.deleteButtons}`} onClick={() => handleConfirmDelete()}>ELIMINAR</button>
                     <button className={`${styles.deleteButtons} ${styles.cancelButtons}`}  onClick={() => setDeleteGuestBlock(false)}>CANCELAR</button>
                 </div>
-            )}
+            )} 
             {guests && guests.map((guest)=>{
                 return(
                     <div key={guest.id} className={ guest.after ? `${styles.guestBlock} ${styles.guestBlockAfter}` : `${styles.guestBlock} ${styles.guestBlockDinner}`}>
