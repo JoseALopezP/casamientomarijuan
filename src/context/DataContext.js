@@ -33,7 +33,7 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         setTransfers(await getCollection('transferedList'))
     }
     const updateGuests = async() => {
-        setGuests(await getCollection('guestList'));
+        setGuests((await getCollection('guestList')).sort((a,b)=>(a.date.toDate() - b.date.toDate())));
         let d = 0; 
         let a = 0;
         guests.forEach(el =>{
@@ -45,6 +45,7 @@ export const DataContextProvider = ({defaultValue = [], children}) => {
         });
         setDinner(d);
         setAfterDinner(a);
+
     }
 
     const selectId = async(id) =>{
