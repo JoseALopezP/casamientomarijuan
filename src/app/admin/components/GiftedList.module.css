@@ -1,0 +1,5 @@
+.giftedSection{
+    width: 100vw;
+    height: calc(100vw - 80px);
+    overflow: scroll;
+}
