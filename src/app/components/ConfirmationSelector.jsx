@@ -47,7 +47,7 @@ const ConfirmationSelector = ({quantity, dinner}) => {
 
     return (
         <>
-            {(left == 1) ? (<p className={`${styles.selectedName}`}>Queda {left} lugar para ti</p>) : (<p className={`${styles.selectedName}`}>Quedan {left} lugares para ti</p>)}
+            {(left == 1) ? (<p className={`${styles.selectedName}`}>Queda {left} lugar para ti</p>) : (left>1 && (<p className={`${styles.selectedName}`}>Quedan {left} lugares para ti</p>))}
             {(sentStatus) ? (
             <form id='confirmationForm' onSubmit={(event) => handleSubmit(event)} className={`${styles.formBlock}`}>
                 <div className={`${styles.inputBlock} ${styles.inputNameBlock}`}>
@@ -62,14 +62,15 @@ const ConfirmationSelector = ({quantity, dinner}) => {
                     <label htmlFor="exampleInputEmail1">DNI:</label>
                     <input type="dni" id="IngresarDni" placeholder="123..." onChange={e => setDni(e.target.value)}/>
                 </div>
+                {dinner == 'ccena' &&
                 <div className={`${styles.inputBlock} ${styles.inputNameBlock}`}>
-                    <label htmlFor="exampleInputEmail1">Ingresa dieta especial (opcional):</label>
-                    <input type="lastName" id="IngresarApellido" onChange={e => setDiet(e.target.value)}/>
-                </div>
+                <label htmlFor="exampleInputEmail1">Ingresa dieta especial (opcional):</label>
+                <input type="lastName" id="IngresarApellido" onChange={e => setDiet(e.target.value)}/>
+                </div>} 
                 {(left > 1) && <button onClick={handlePush} type="reset" className={`${styles.submitButton}`} >AGREGAR</button>}
             <button type="submit" className={`${styles.submitButton}`}>LISTO <br/><b>(NO AGREGAR MÁS)</b></button>
             </form>
-            ) : (<p className={`${styles.thanksMsg}`}><b>Confirmado!!!</b> Te esperamos ❤️​</p>)}
+            ) : (<p className={`${styles.thanksMsg}`}><b>Confirmado!!!</b><br/> Te esperamos ❤️​</p>)}
         </>
     );
 }
