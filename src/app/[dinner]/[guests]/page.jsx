@@ -19,7 +19,7 @@ export default function Home({params}) {
       <Photo/>
       <Invitation/>
       <Carousel/>
-      <Information/>
+      <Information dinner={params.dinner}/>
       <Schedule dinner={params.dinner}/>
       <Places quant={params.guests}/>
       <Gift/>
